@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0f" />
+  <title>supersharkgem | Links</title>
+  <meta name="description" content="Links in bio — red/black theme." />
+
+  <!-- Open Graph (optional) -->
+  <meta property="og:title" content="supersharkgem | Links" />
+  <meta property="og:description" content="Find my socials, streams, and links here." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg0:#07070a;
+      --bg1:#0b0b10;
+      --red:#ff2a3a;
+      --red2:#b3001b;
+      --text:#f4f4f7;
+      --muted:#b8b8c4;
+      --card: rgba(255,255,255,.06);
+      --stroke: rgba(255,255,255,.10);
+      --glow: 0 0 22px rgba(255,42,58,.35);
+      --radius: 22px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 80% -10%, rgba(255,42,58,.22), transparent 60%),
+        radial-gradient(700px 400px at 10% 10%, rgba(179,0,27,.18), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px 16px 36px;
+    }
+
+    .card{
+      width:100%;
+      max-width:560px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 50px rgba(0,0,0,.55);
+      backdrop-filter: blur(10px);
+      padding:22px;
+      position:relative;
+    }
+
+    /* subtle animated “red pulse” accent */
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      border-radius: calc(var(--radius) + 2px);
+      background: radial-gradient(300px 180px at 20% 0%, rgba(255,42,58,.22), transparent 60%);
+      filter: blur(10px);
+      z-index:-1;
+      animation: pulse 5.5s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100%{opacity:.55; transform:translateY(0)}
+      50%{opacity:.95; transform:translateY(-6px)}
+    }
+
+    header{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+
+    .avatar{
+      width:62px;
+      height:62px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,42,58,.55), transparent 60%),
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      border:1px solid var(--stroke);
+      box-shadow: var(--glow);
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      letter-spacing:.5px;
+      color: #fff;
+      user-select:none;
+    }
+
+    .title{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      min-width:0;
+    }
+
+    h1{
+      font-size: 20px;
+      line-height:1.1;
+      margin:0;
+      font-weight: 800;
+      letter-spacing:.2px;
+    }
+
+    .handle{
+      font-size: 13px;
+      color: var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .bio{
+      margin: 12px 0 18px;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 14px;
+      border-radius: 16px;
+      text-decoration:none;
+      color: var(--text);
+      border:1px solid var(--stroke);
+      background: rgba(0,0,0,.35);
+      transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease, background .12s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .btn::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(90deg, transparent, rgba(255,42,58,.16), transparent);
+      transform: translateX(-120%);
+      transition: transform .55s ease;
+    }
+
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(255,42,58,.55);
+      box-shadow: 0 10px 26px rgba(0,0,0,.45), var(--glow);
+      background: rgba(0,0,0,.44);
+    }
+    .btn:hover::before{ transform: translateX(120%); }
+
+    .btn:active{ transform: translateY(0); }
+
+    .left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .icon{
+      width:38px;
+      height:38px;
+      border-radius: 13px;
+      display:grid;
+      place-items:center;
+      background: rgba(255,42,58,.12);
+      border: 1px solid rgba(255,42,58,.28);
+      flex:0 0 auto;
+    }
+
+    .labelwrap{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width:0;
+    }
+
+    .label{
+      font-weight: 700;
+      font-size: 14px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .sub{
+      font-size: 12px;
+      color: var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .arrow{
+      color: rgba(255,255,255,.75);
+      font-size: 18px;
+      flex:0 0 auto;
+    }
+
+    .row{
+      display:flex;
+      gap:10px;
+      margin-top: 14px;
+      flex-wrap:wrap;
+    }
+
+    .chip{
+      flex:1 1 160px;
+      text-align:center;
+      padding:10px 12px;
+      border-radius: 999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer{
+      margin-top: 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color: rgba(184,184,196,.85);
+      font-size: 12px;
+    }
+
+    .tiny{
+      opacity:.85;
+    }
+
+    .smalllink{
+      color: rgba(255,42,58,.95);
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,42,58,.35);
+    }
+    .smalllink:hover{ border-bottom-color: rgba(255,42,58,.85); }
+
+    @media (prefers-reduced-motion: reduce){
+      .card::before, .btn::before{ animation:none; transition:none; }
+      .btn{ transition:none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <main class="card" aria-label="Link in bio">
+      <header>
+        <div class="avatar" aria-hidden="true">S</div>
+
+        <div class="title">
+          <h1>supersharkgem</h1>
+          <div class="handle">@supersharkgem</div>
+        </div>
+      </header>
+
+      <p class="bio">
+        Gaming clips, lives, storytimes, and whatever chaos I’m cooking up.
+        Tap a link and step through the red door 🔻
+      </p>
+
+      <section class="links" aria-label="Links">
+        <!-- Replace href="" with your real links -->
+        <a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon">🎥</span>
+            <span class="labelwrap">
+              <span class="label">TikTok</span>
+              <span class="sub">Lives + shorts</span>
+            </span>
+          </span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="https://www.youtube.com/" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon">▶️</span>
+            <span class="labelwrap">
+              <span class="label">YouTube</span>
+              <span class="sub">Shorts + videos</span>
+            </span>
+          </span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="https://www.twitch.tv/" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon">🟣</span>
+            <span class="labelwrap">
+              <span class="label">Twitch</span>
+              <span class="sub">Streams</span>
+            </span>
+          </span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon">📸</span>
+            <span class="labelwrap">
+              <span class="label">Instagram</span>
+              <span class="sub">Updates + highlights</span>
+            </span>
+          </span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="btn" href="mailto:angelinkwrites@gmail.com">
+          <span class="left">
+            <span class="icon">✉️</span>
+            <span class="labelwrap">
+              <span class="label">Email</span>
+              <span class="sub">Business / collabs</span>
+            </span>
+          </span>
+          <span class="arrow">›</span>
+        </a>
+      </section>
+
+      <div class="row" aria-label="Quick tags">
+        <div class="chip">🔴 Red/Black Theme</div>
+        <div class="chip">📱 Mobile-first</div>
+        <div class="chip">⚡ Fast + simple</div>
+      </div>
+
+      <footer>
+        <span class="tiny">© <span id="year"></span> supersharkgem</span>
+        <a class="smalllink" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">
+          back to top
+        </a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
